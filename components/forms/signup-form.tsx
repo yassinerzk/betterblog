@@ -9,6 +9,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import Link from "next/link"
 
 export function SignupForm({
   className,
@@ -85,7 +86,7 @@ export function SignupForm({
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                Already have an account? <a href="/login">Login</a>
+                Already have an account? <Link href="/login">Login</Link>
               </FieldDescription>
             </FieldGroup>
           </form>
