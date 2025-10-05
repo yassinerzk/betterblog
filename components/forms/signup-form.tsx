@@ -21,9 +21,9 @@ export function SignupForm({
           <form className="p-6 md:p-8">
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center">
-                <h1 className="text-2xl font-bold">Welcome back</h1>
+                <h1 className="text-2xl font-bold">Welcome to Better Blog</h1>
                 <p className="text-muted-foreground text-balance">
-                  Login to your Acme Inc account
+                  Create an account
                 </p>
               </div>
               <Field>
@@ -44,6 +44,7 @@ export function SignupForm({
                   required
                 />
               </Field>
+              <div className="grid grid-cols-2 gap-4">
               <Field>
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">Password</FieldLabel>
@@ -56,13 +57,14 @@ export function SignupForm({
                 </div>
                 <Input id="confirm-password" type="password" required />
               </Field>
+              </div>
               <Field>
                 <Button type="submit">Sign up</Button>
               </Field>
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with
               </FieldSeparator>
-              <Field className="grid grid-cols-3 gap-4">
+              <Field className="grid grid-cols-2 gap-4">
                 <Button variant="outline" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -89,7 +91,7 @@ export function SignupForm({
           </form>
           <div className="bg-muted relative hidden md:block">
             <img
-              src="/placeholder.svg"
+              src="/bg.webp"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
