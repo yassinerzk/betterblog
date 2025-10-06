@@ -15,3 +15,19 @@ export const signInUser = async( email:string, password:string )=>{
         return {success:false, message:error.message || 'Failed to sign in user'};
     }
 };
+
+export const signUpUser = async( email:string, password:string, name:string )=>{
+    try{
+        await auth.api.signUpEmail({
+            body: {
+                email,
+                password,
+                name
+            },
+        });
+        return {success:true, message:'User signed up successfully'};
+    }catch(err){
+        const error = err as Error;
+        return {success:false, message:error.message || 'Failed to sign up user'};
+    }
+};
