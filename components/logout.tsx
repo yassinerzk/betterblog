@@ -14,7 +14,7 @@ export function Logout() {
   };
 
   return (
-    <DropdownMenuGroup>
+    <DropdownMenuGroup onClick={()=>handleLogout()}>
     <DropdownMenuItem >
       <LogOut />
       Logout

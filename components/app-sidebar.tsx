@@ -27,12 +27,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { authClient } from "@/lib/auth-client"
+
+const { data: session } = await authClient.getSession()
+const user = session?.user || {name: null, email: null, image: null};
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: user.name || "shadcn",
+    email: user?.email || "m@example.com",
+    avatar: user?.image || "/avatars/betterb.png",
   },
   navMain: [
     {
